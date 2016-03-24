@@ -145,9 +145,6 @@ hexvalue = {'0':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,
             '9':9, 'A':10, 'B':11, 'C':12, 'D':13, 'E':14, 'F':15, 
             'a':10, 'b':11, 'c':12, 'd':13, 'e':14, 'f':15,};
 
-def hex_to_vale(onechar):
-    symbol = ord(onechar)
-    symbol
 
 values = np.array([])
 for pair in puzzle1:
@@ -167,7 +164,10 @@ brute_shift_code('FNVQ')
 
 #We expect FNVQ to be 'said', so do brute shift attack, reveals shift of 14.
 
-shift = 14
+shift_val = 13
+output = shift_only_letters('FNVQ',shift_val)
+print '\nShift is %d' % shift_val
+print output   
 
 #now set up a function to only shift the letters, retaining capitalisation
 
